@@ -18,8 +18,11 @@ def gui_main():
     print(type(args))
     if "s reset" in args.Reset_Cmms : # 获取文本框的输入值
         print(">>> reset success.")
+        
     else:
         print(">>> ERROR: reset fail.")
+
+
  
 if __name__ == '__main__':
     gui_main()
