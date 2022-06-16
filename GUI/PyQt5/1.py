@@ -1,17 +1,32 @@
 import sys
-from PyQt5.QtWidgets import QMainWindow, QApplication, QPushButton
-class MainWindow(QMainWindow):
-    def __init__(self, parent=None):
-        super(MainWindow, self).__init__(parent)
-        self.resize(600, 300)
-        self.setWindowTitle('创建按钮和按钮点击事件的例子')
-        self.button1 = QPushButton('按键1', self)
-        self.button1.clicked.connect(self.clickButton)
-    def clickButton(self):
-        sender = self.sender()
-        print(sender.text() + '被点击')
-if __name__ == '__main__':
+from PyQt5.QtWidgets import QApplication, QWidget, QDesktopWidget
+ 
+ 
+# 继承QWidget
+class main(QWidget):
+    def __init__(self):
+        super().__init__()
+        self.init_ui()
+ 
+    def init_ui(self):
+        # 调整窗口大小
+        self.resize(900, 500)
+        # 窗口居中
+        self.center()
+        # 窗口标题
+        self.setWindowTitle("PyQt5用面向对象实现")
+        # 显示窗口
+        self.show()
+ 
+    # 实现居中
+    def center(self):
+        f = self.frameGeometry()
+        c = QDesktopWidget().availableGeometry().center()
+        f.moveCenter(c)
+        self.move(f.topLeft())
+ 
+ 
+if __name__ == "__main__":
     app = QApplication(sys.argv)
-    main = MainWindow()
-    main.show()
+    w = main()
     sys.exit(app.exec_())
