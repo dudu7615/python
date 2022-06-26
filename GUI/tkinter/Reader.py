@@ -1,8 +1,9 @@
-import win32com.client
+""" pip install pywin32 """
+from win32com.client import Dispatch
 from tkinter import *
 from tkinter import filedialog
 
-speaker = win32com.client.Dispatch("SAPI.SpVoice").Speak
+speaker = Dispatch("SAPI.SpVoice").Speak
 
 
 app = Tk()
