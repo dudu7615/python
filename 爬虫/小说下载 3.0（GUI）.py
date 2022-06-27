@@ -110,7 +110,7 @@ def main():
 
     file1.close()
     print('finish')
-    finish = Label(app,text=f"共尝试了{x1}集\n其中{x2}集无法下载\n{x3}集无法下载",font=("微软雅黑",20))
+    finish = Label(app,text=f"共尝试了{x1}集\n其中{x2}集成功下载\n{x3}集无法下载",font=("微软雅黑",20))
     finish.place(x=10,y=50,height=250,width=480)
 
 app = Tk()
