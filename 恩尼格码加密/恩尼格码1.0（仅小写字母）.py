@@ -148,4 +148,4 @@ if x1 == '1':
             z1 += 0
 
 print(ok)
-
+input()

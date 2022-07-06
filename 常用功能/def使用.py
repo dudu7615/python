@@ -1,11 +1,12 @@
-#规定‘abc’的内容
+###---基本使用---###
+#规定‘abc’的内容直接定义操作
 def abc():
-    a = 1
-    b = 3
-    a+=1
-    b+=1
-    print(a,b)
-
-#规定‘abc’的内容
+    print('000')
 
 abc()  #使用‘abc’
+
+#设置函数
+def aaa(a,b):
+    print(a,b)
+
+aaa('12','dudu')  # 具有可操作性
