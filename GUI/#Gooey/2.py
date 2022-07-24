@@ -3,10 +3,10 @@ from gooey import Gooey, GooeyParser
  
  
 @Gooey(
-    richtext_controls=True,                 # 打开终端对颜色支持
-    program_name="MQTT连接订阅小工具",        # 程序名称
-    encoding="utf-8",                       # 设置编码格式，打包的时候遇到问题
-    progress_regex="^progress: (\d+)%$",   # 正则，用于模式化运行时进度信息
+    richtext_controls=True,                # 打开终端对颜色支持
+    program_name="MQTT连接订阅小工具",       # 程序名称
+    encoding="utf-8",                      # 设置编码格式，打包的时候遇到问题
+    progress_regex="^progress: (\d+)%$",  # 正则，用于模式化运行时进度信息
     language='chinese'
 )
 def main():

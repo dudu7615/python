@@ -1,11 +1,11 @@
-from PyQt5.QtWidgets import QMainWindow,QHBoxLayout, QPushButton ,  QApplication, QWidget  
+from PyQt5.QtWidgets import QMainWindow,QHBoxLayout, QPushButton , QApplication, QWidget  
 import sys 
 
 class WinForm(QMainWindow):  
 	
 	def __init__(self, parent=None):  
 		super(WinForm, self).__init__(parent)
-		self.resize(1000,  1000)  
+		self.resize(1000, 1000)  
 		self.setWindowTitle('关闭主窗口例子') 		
 		self.button1 = QPushButton('关闭主窗口')  		
 		self.button1.clicked.connect(self.onButtonClick) 
