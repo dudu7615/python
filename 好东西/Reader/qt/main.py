@@ -9,7 +9,7 @@ def read():
     speaker(Text)
 
 def open_txt():
-    name = filedialog.askopenfilename(filetypes=[("文本文件",".txt")])
+    name = 
     file1 = open(name,'r',encoding='utf8')
     r3.insert(1.0,file1.read())
 
