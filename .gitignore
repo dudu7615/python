@@ -6,8 +6,7 @@
 # 打包输出
 **/output 
 **/Release
-**/*.build
-**/Release
-**/*.dist
-**/*.onefile-build
-**/build
+**/build/**
+
+!**/*.aip
+!**/*.spec
