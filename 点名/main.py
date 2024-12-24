@@ -6,24 +6,18 @@ import os
 import base64
 import random
 import sys
+import pickle
 
 ROOT = Path(__file__).parent
-DATA = Path(
-    Path(os.environ["LocalAppData"]) / "点名器" / "data"
-    if getattr(sys, "frozen", False)
-    else ROOT
-)  # 判断程序是否被打包
+DATA =  ROOT
+
 if not DATA.exists():
     DATA.mkdir(exist_ok=True, parents=True)
 QML = ROOT / "Ui"
 
 os.environ["QT_QUICK_CONTROLS_CONF"] = str(QML / "qtquickcontrols2.conf")
 
-names: list[str] = eval(
-    base64.decodebytes(
-        (DATA / "names").read_text(encoding="utf-8").encode("utf-8")
-    ).decode("utf-8")
-)
+names: list[str] = pickle.load((DATA / "names.pkl").open("rb"))
 
 
 class UI(QObject):
@@ -33,10 +27,10 @@ class UI(QObject):
     @Slot(result=str)
     def run(self):
         name = random.choice(names) if names else "没有名字了，重启程序以继续"
-        try:
-            names.remove(name)
-        except:
-            ...
+        # try:
+        #     names.remove(name)
+        # except:
+        #     ...
         return name
 
     def saveData(self):
