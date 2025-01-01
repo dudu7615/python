@@ -1,0 +1,35 @@
+#showName {
+    font-size: 64pt;
+    background-color: #f1f1f1;
+    /* 边框、圆角 */
+    border: 1px solid #a1a1a1; 
+    border-radius: 20px;    
+
+         
+}
+#run {
+    font-size: 20pt;
+    /* 字体加粗 */
+    font-weight: bold;
+    /* 边框 */
+    border:2px solid #a1a1a1;
+    /* 圆角 */
+    border-radius:25px;
+}
+#run:hover {
+    background-color: #f1f1f1;
+}
+#run:pressed {
+    background-color: #e9067aac;
+}
+
+QMainWindow {
+    background: qlineargradient(
+        x1:0, 
+        y1:0, 
+        x2:1, 
+        y2:1, 
+        stop:0 #84fab0, 
+        stop:1 #8fd3f4
+    );
+}

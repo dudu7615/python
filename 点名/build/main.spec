@@ -5,7 +5,7 @@ a = Analysis(
     ['D:/dudu/Documents/dudu/Python/点名/main.py'],
     pathex=[],
     binaries=[],
-    datas=[('D:/dudu/Documents/dudu/Python/点名/Ui', 'Ui/'), ('D:/dudu/Documents/dudu/Python/点名/names.pkl', '.'), ('D:/dudu/Documents/dudu/Python/点名/icon.png', '.')],
+    datas=[('D:/dudu/Documents/dudu/Python/点名/names.pkl', '.'), ('D:/dudu/Documents/dudu/Python/点名/icon.png', '.'), ('D:/dudu/Documents/dudu/Python/点名/style.qss', '.')],
     hiddenimports=[],
     hookspath=[],
     hooksconfig={},
